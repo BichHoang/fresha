@@ -1,5 +1,7 @@
 package com.doan.va.fresha.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,5 +31,9 @@ public class ProductService {
 	
 	public int countProductOfCategory(int idCat) {
 		return objRes.countProductOfCategory(idCat);
+	}
+	
+	public List<Product> findProductByEnable(int param){
+		return objRes.findProductByEnable(param);
 	}
 }

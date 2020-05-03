@@ -33,10 +33,8 @@ public class UserController {
 	
 	@RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
 	public User findUser(@PathVariable("id") int id) {
-		System.out.println("vao roi");
 		User User= objService.getOne(id);
 		if(User == null) {
-			System.out.println("Loi");
 			ResponseEntity.notFound().build();
 		}
 		return User;

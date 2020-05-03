@@ -26,4 +26,8 @@ public class UserService {
 	public void delete(User obj) {
 		objRes.delete(obj);
 	}
+	
+	public User checkUser(String email, String password) {
+		return objRes.checkUser(email, password);
+	}
 }

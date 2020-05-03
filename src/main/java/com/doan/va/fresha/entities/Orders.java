@@ -27,6 +27,7 @@ public class Orders {
 	private int id_user;
 	private int status;
 	private Date created;
+	private boolean enable;
 	
 	public Orders() {
 		super();
@@ -34,7 +35,7 @@ public class Orders {
 	}
 	
 	public Orders(int id_order, String customer, String email, String phone, String address, String note, int id_user,
-			int status, Date created) {
+			int status, Date created, boolean enable) {
 		super();
 		this.id_order = id_order;
 		this.customer = customer;
@@ -45,7 +46,10 @@ public class Orders {
 		this.id_user = id_user;
 		this.status = status;
 		this.created = created;
+		this.enable = enable;
 	}
+
+
 
 	public int getId_order() {
 		return id_order;
@@ -117,5 +121,13 @@ public class Orders {
 
 	public void setCreated(Date created) {
 		this.created = created;
+	}
+
+	public boolean isEnable() {
+		return enable;
+	}
+
+	public void setEnable(boolean enable) {
+		this.enable = enable;
 	}
 }
